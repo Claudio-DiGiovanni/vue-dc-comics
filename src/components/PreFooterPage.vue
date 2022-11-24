@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
   .prefooter{
     width: 100%;
     display: flex;
