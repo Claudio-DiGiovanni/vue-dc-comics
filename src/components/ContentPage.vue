@@ -13,9 +13,10 @@ export default {
 
 <style lang="scss" scoped>
   main{
+    margin-top: 7rem;
     width: 100%;
     background-color: black;
-    min-height: 10rem;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;

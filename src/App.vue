@@ -4,6 +4,7 @@
     <ContentPage />
     <PreFooterPage />
     <FooterPage />
+    <EndPageButtons />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HeaderPage from '@/components/HeaderPage.vue';
 import ContentPage from '@/components/ContentPage.vue';
 import PreFooterPage from '@/components/PreFooterPage.vue';
 import FooterPage from '@/components/FooterPage.vue';
+import EndPageButtons from '@/components/EndPageButtons.vue';
 
 export default {
   components: {
@@ -19,6 +21,7 @@ export default {
     ContentPage,
     PreFooterPage,
     FooterPage,
+    EndPageButtons,
   },
 };
 </script>

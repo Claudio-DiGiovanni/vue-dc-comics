@@ -32,6 +32,7 @@ export default {
 
   header{
     width: 100%;
+    height: 7rem;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -43,6 +44,15 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 1200px;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo{
+    height: 100%;
   }
 
   ul{
