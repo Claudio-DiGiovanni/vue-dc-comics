@@ -50,7 +50,46 @@
 
 <script>
 export default {
-
+  name: 'FooterPage',
+  data() {
+    return {
+      arrLink: [
+        {
+          title: 'dc comics',
+          links: [
+            {
+              url: '#Characters',
+              text: 'Characters',
+            },
+            {
+              url: '#Comics',
+              text: 'Comics',
+            },
+            {
+              url: '#Movies',
+              text: 'Movies',
+            },
+            {
+              url: '#TV',
+              text: 'TV',
+            },
+            {
+              url: '#Games',
+              text: 'Games',
+            },
+            {
+              url: '#Videos',
+              text: 'Videos',
+            },
+            {
+              url: '#News',
+              text: 'News',
+            },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 

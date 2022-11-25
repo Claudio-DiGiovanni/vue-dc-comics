@@ -1,13 +1,27 @@
 <template>
   <main>
+    <div class="jumbotron"></div>
     <div class="container">
-      <p>--> Content goes here</p>
+      <h1>current series</h1>
+      <Card v-for="obj in arrFilm" :key="obj.thumb" :film="obj" class="card" />
+      <button>load more</button>
     </div>
   </main>
 </template>
 <script>
-export default {
+import arrFilm from '@/components/dati';
+import Card from '@/components/CardFilm.vue';
 
+export default {
+  name: 'ContentPage',
+  components: {
+    Card,
+  },
+  data() {
+    return {
+      arrFilm,
+    };
+  },
 };
 </script>
 
@@ -16,19 +30,47 @@ export default {
     margin-top: 7rem;
     width: 100%;
     background-color: black;
-    height: 10rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  .jumbotron{
+    width: 100%;
+    height: 25rem;
+    background-image: url(@/img/jumbotron.jpg);
+    background-position: top;
+    background-size: cover;
+  }
   .container{
+    margin: 4rem 0;
     width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
   }
 
-  p{
+  .card{
+    flex: 0 0 calc(100% / 6);
+  }
+
+  h1{
+    position: absolute;
     color: white;
-    font-size: 25px;
-    font-weight: 600;
+    background-color: #0282f9;
+    text-transform: uppercase;
+    padding: 1rem;
+    top: -6rem;
+    left: -6rem;
+  }
+
+  button{
+    background-color: #0282f9;
+    color: white;
+    text-transform: uppercase;
+    padding: .5rem 3rem;
+    margin: 2rem 0 1rem;
   }
 </style>

@@ -1,3 +1,4 @@
+<!-- eslint-disable max-len -->
 <template>
   <header>
     <div class="container">
@@ -6,16 +7,7 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="#">characters</a></li>
-          <li><a href="#">comics</a></li>
-          <li><a href="#">movies</a></li>
-          <li><a href="#">tv</a></li>
-          <li><a href="#">games</a></li>
-          <li><a href="#">collectibles</a></li>
-          <li><a href="#">videos</a></li>
-          <li><a href="#">fans</a></li>
-          <li><a href="#">news</a></li>
-          <li><a href="#">shop</a></li>
+          <li v-for="eleMenu in arrMenu" :key="eleMenu.text"><a :href="eleMenu.url">{{ eleMenu.text }}</a></li>
         </ul>
       </nav>
     </div>
@@ -24,7 +16,53 @@
 
 <script>
 export default {
-
+  name: 'HeaderPage',
+  data() {
+    return {
+      arrMenu: [
+        {
+          url: '#characters',
+          text: 'characters',
+        },
+        {
+          url: '#comics',
+          text: 'comics',
+        },
+        {
+          url: '#movies',
+          text: 'movies',
+        },
+        {
+          url: '#tv',
+          text: 'tv',
+        },
+        {
+          url: '#games',
+          text: 'games',
+        },
+        {
+          url: '#collectibles',
+          text: 'collectibles',
+        },
+        {
+          url: '#videos',
+          text: 'videos',
+        },
+        {
+          url: '#videos',
+          text: 'videos',
+        },
+        {
+          url: '#fans',
+          text: 'fans',
+        },
+        {
+          url: '#shop',
+          text: 'shop',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -39,6 +77,7 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
   }
   .container{
     display: flex;
