@@ -2,45 +2,9 @@
   <footer>
     <div class="container">
       <div class="link-footer">
-        <ul>
-          <li><h2>dc comics</h2></li>
-          <li><a href="#">Characters</a></li>
-          <li><a href="#">Comics</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">TV</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
-
-        <ul>
-          <li><h2>shop</h2></li>
-          <li><a href="#">Shop DC</a></li>
-          <li><a href="#">Shop DC Collectibles</a></li>
-        </ul>
-
-        <ul>
-          <li><h2>dc</h2></li>
-          <li><a href="#">Terms Of Use</a></li>
-          <li><a href="#">Privacy policy (New)</a></li>
-          <li><a href="#">Ad Choices</a></li>
-          <li><a href="#">Advertising</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Subscription</a></li>
-          <li><a href="#">Talent Workshops</a></li>
-          <li><a href="#">CPSC Certificates</a></li>
-          <li><a href="#">Ratings</a></li>
-          <li><a href="#">Show Help</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-
-        <ul>
-          <li><h2>sites</h2></li>
-          <li><a href="#">DC</a></li>
-          <li><a href="#">MAD Magazine</a></li>
-          <li><a href="#">DC Kids</a></li>
-          <li><a href="#">DC Universe</a></li>
-          <li><a href="#">DC Power Visa</a></li>
+        <ul v-for="obj in arrLink" :key="obj.title">
+          <li><h2>{{ obj.title }}</h2></li>
+          <li v-for="el in obj.links" :key="el.text"><a :href="el.url">{{ el.text }}</a></li>
         </ul>
       </div>
       <img src="@/img/dc-logo-bg.png" alt="">
@@ -84,6 +48,109 @@ export default {
             {
               url: '#News',
               text: 'News',
+            },
+          ],
+        },
+        {
+          title: 'shop',
+          links: [
+            {
+              url: '#ShopDC',
+              text: 'Shop DC',
+            },
+            {
+              url: '#ShopDCCollectibles',
+              text: 'Shop DC Collectibles',
+            },
+          ],
+        },
+        {
+          title: 'DC',
+          links: [
+            {
+              url: '#TermsOfUse',
+              text: 'Term Of Use',
+            },
+            {
+              url: '#PrivacyPolicy',
+              text: 'Privacy Policy (new)',
+            },
+            {
+              url: '#adChoice',
+              text: 'Ad Choice',
+            },
+            {
+              url: '#advertising',
+              text: 'Advertising',
+            },
+            {
+              url: '#jobs',
+              text: 'Jobs',
+            },
+            {
+              url: '#subscription',
+              text: 'Subscription',
+            },
+            {
+              url: '#talent',
+              text: 'Talent',
+            },
+            {
+              url: '#workshop',
+              text: 'Workshop',
+            },
+            {
+              url: '#CPSC',
+              text: 'CPSC',
+            },
+            {
+              url: '#certificates',
+              text: 'Certificates',
+            },
+            {
+              url: '#rating',
+              text: 'Rating',
+            },
+            {
+              url: '#showHelp',
+              text: 'Show Help',
+            },
+            {
+              url: '#contactUs',
+              text: 'Contact Us',
+            },
+          ],
+        },
+        {
+          title: 'sites',
+          links: [
+            {
+              url: '#DC',
+              text: 'DC',
+            },
+            {
+              url: '#MAD',
+              text: 'MAD',
+            },
+            {
+              url: '#magazine',
+              text: 'Magazine',
+            },
+            {
+              url: '#DCKids',
+              text: 'DC Kids',
+            },
+            {
+              url: '#DCUniverse',
+              text: 'DC Universe',
+            },
+            {
+              url: '#DCPower',
+              text: 'DC Power',
+            },
+            {
+              url: '#visa',
+              text: 'Visa',
             },
           ],
         },

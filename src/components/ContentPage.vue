@@ -72,5 +72,7 @@ export default {
     text-transform: uppercase;
     padding: .5rem 3rem;
     margin: 2rem 0 1rem;
+    font-size: 20px;
+    font-weight: 500;
   }
 </style>
